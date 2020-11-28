@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chair{
+    height:50%;
+    border-radius: 10%;
+    position: absolute;
+    top:65% ;
+    left:75%;
+    transform: translate(-50%,-70%);
+    width: 40%;
+}
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid black;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+  
+.s1{
+    background-image: url(../images/cover_cut.jpg);
+    background-size: cover;
+    background-position: top;
+    
+}
+.s1::before {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+     left:0;
+    background:rgba(0,0,0,0.4);
+    opacity:1;
+}
+
+.section h1{
+    font-size: 64px;
+    position: absolute;
+    top: 2%;
+    left:52%;
+    transform: translate(-50%,-20%);
+    color: white;
+    font-family: "Poppins","sans-serif";
+    background: #3E5151;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DECBA4, #649292);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DECBA4, #577e7e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background:linear-gradient(to left , #87c7df,#648896) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    ;
+}
+.feel_boost{
+    font-size: 70px;
+    position: absolute;
+    bottom: 2%;
+    left:25%;
+    transform: translate(-50%,-20%);
+    color: rgb(136, 133, 133);
+    font-family: 'Amatic SC', cursive;
+    
+
+
+}
+
+.s2,.s4,.s3{
+    background:linear-gradient(to left top , rgb(194, 187, 187),white) ; 
+}
+.s2 h1{
+    font-size: 48px;
+    background:linear-gradient(to left , #87c7df,#222222) ;
+    top:15%;
+    left:50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.s3 h1{
+    font-size: 48px;
+    background:linear-gradient(to left , #87c7df,#222222) ;
+    top:5%;
+    left:50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.s4 h1{
+    font-size: 48px;
+    background:linear-gradient(to left , #87c7df,#222222) ;
+    top:5%;
+    left:12%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.video-div{
+    position: absolute;
+    left:52%;
+    top:60%;
+    transform: translate(-50%,-50%);
+}
+#svg_img{
+    width: 30%;
+    position: absolute;
+    right:74%;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.description{
+    margin: 20%;
+    margin-left: 20px;
+    width: 50%;
+    margin-left: 2%;
+    font-size: 25px;
+    font-family: "Poppins","sans-serif";
+}
+ul{
+    margin-left:20px;
+}
+ul>li{
+    margin-top:15px ;
+}
+
+
+.description p {
+    margin: 50px 0px;
+}
+
+.s4{
+    font-family: "Poppins", sans-serif;
+    max-height: 100vh;/*takes up the whole page*/
+    display : flex;
+    align-items:center;
+    justify-content: center;
+    perspective: 1000px; /*look upon it*/
+   
+
+}
+
+.container{
+    
+    position: absolute;
+    left:25%;
+    top:4%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    min-height: 80vh;
+    transform-style: preserve-3d;/*to give a 3d look buy pushing out or z-nidex the text and all*/
+    width: 25rem;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0px 0px 50px rgba(0,0,0,0.2);  /*Need to learn about this two because we want a big blur qst one and then a slight less blur second one*/
+    border-radius: 30px;
+    padding: 0rem 3rem;
+}
+.sneaker{
+    min-height: 43vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.sneaker img{
+    width: 15rem;
+    z-index: 2; /*to add the image before the gradient*/
+    transition: all 0.75s ease-out;
+}
+
+.circle{
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245,70,66,0.75),
+        rgba(8,83,156,0.75)
+    );/*the third bariable is the intensity*/
+    position: absolute; /*to push the gradient exactly behid the shoe // how did he figure out*/
+    border-radius: 50%;
+    z-index: 1; 
+}
+
+.info h1{
+    font-size:3rem;
+    transition: all 0.75s ease-out;
+}
+
+.info h3{
+    font: size 1.3rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+.size{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out; 
+}
+
+.size button{
+    padding: 0.5rem 2rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+}
+button :focus{
+    border: none;
+}
+
+button.active{
+    background: #585858;
+    color: white;
+
+}
+
+.purchase{
+    margin-top:5rem;
+    margin-bottom: 1rem;
+    transition: all 0.75s ease-out;
+}
+
+.purchase button{
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #f54642;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
