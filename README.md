@@ -6,4 +6,5 @@ Left To Do
 1. Add an overlaying menu in first page
 2. Add hover effect with page details on the navigation circles
 3. Figure out a way to load high res images smoothly
+4. Add responsiveness
 
